@@ -7,8 +7,10 @@ const InputTodo = ({ setTasks, tasks }) => {
   const input = useRef();
 
   const add = () => {
-    setTasks([...tasks, input.current.value]);
-    input.current.value = "";
+    if (input.current.value) {
+      setTasks([...tasks, input.current.value]);
+      input.current.placeholder = "";
+    }
   };
 
   return (
