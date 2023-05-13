@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <InputTodo setTasks={setTasks} tasks={tasks} />
-      <ListTodo tasks={tasks} />
+      <ListTodo tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
