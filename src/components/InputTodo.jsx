@@ -4,8 +4,8 @@ const InputTodo = ({ setTasks, tasks }) => {
   const input = useRef();
 
   const add = () => {
-    console.log(input.current.value);
     setTasks([...tasks, input.current.value]);
+    input.current.value = "";
   };
 
   return (
