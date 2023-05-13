@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import InputTodo from "./components/InputTodo";
 import ListTodo from "./components/ListTodo";
@@ -14,8 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      <InputTodo setTasks={setTasks} tasks={tasks} />
-      <ListTodo tasks={tasks} setTasks={setTasks} />
+      <div className="todo bg-danger">
+        <InputTodo setTasks={setTasks} tasks={tasks} />
+        <ListTodo tasks={tasks} setTasks={setTasks} />
+      </div>
     </div>
   );
 }
