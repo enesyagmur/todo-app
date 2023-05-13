@@ -1,4 +1,5 @@
 import React from "react";
+import { CiSquareRemove } from "react-icons/ci";
 
 const ListTodo = ({ tasks, setTasks }) => {
   const remove = (item) => {
@@ -10,7 +11,8 @@ const ListTodo = ({ tasks, setTasks }) => {
       {tasks.map((item) => (
         <li key={item}>
           {item}
-          <button onClick={() => remove(item)}>-</button>
+
+          <CiSquareRemove onClick={() => remove(item)} />
         </li>
       ))}
     </div>

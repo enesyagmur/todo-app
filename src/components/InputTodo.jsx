@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { GrAddCircle } from "react-icons/gr";
 
 const InputTodo = ({ setTasks, tasks }) => {
   const input = useRef();
@@ -11,7 +12,7 @@ const InputTodo = ({ setTasks, tasks }) => {
   return (
     <div>
       <input ref={input} type="text" />
-      <button onClick={add}>+</button>
+      <GrAddCircle onClick={add} />
     </div>
   );
 };
