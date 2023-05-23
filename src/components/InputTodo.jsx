@@ -9,7 +9,7 @@ const InputTodo = ({ setTasks, tasks }) => {
   const add = () => {
     if (input.current.value) {
       setTasks([...tasks, input.current.value]);
-      input.current.placeholder = "";
+      input.current.value = "";
     }
   };
 
